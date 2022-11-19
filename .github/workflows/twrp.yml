@@ -30,8 +30,8 @@ jobs:
         cd ~/TWRP
         mkdir ~/.bin
         curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/.bin/repo
-        python3 ~/.bin/repo init --depth=1 -u https://github.com/unlegacy-devices/fox-6.0_manifest.git -b fox_6.0
-        git clone --branch twrp-7.1 --single-branch https://github.com/NotNoelChannel/twrp_device_samsung_a3xelte.git ~/TWRP/device/samsung/a3xelte
+        python3 ~/.bin/repo init --depth=1 -u https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-11
+        git clone --branch twrp-10 --single-branch https://github.com/NotNoelChannel/twrp_device_samsung_a3xelte.git ~/TWRP/device/samsung/a3xelte
         python3 ~/.bin/repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
     - name: Building TWRP
       run: |
@@ -42,10 +42,8 @@ jobs:
         cd ~/TWRP
         source build/envsetup.sh
         export ALLOW_MISSING_DEPENDENCIES=true
-        export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
         export LC_ALL="C"
-        export OF_LEGACY_SHAR512=1
-        lunch omni_a3xelte-eng
+        lunch twrp_a3xelte-eng
         mka recoveryimage
         export PATH=$OLDPATH
         export JAVA_HOME=$OLDJAVAHOME
