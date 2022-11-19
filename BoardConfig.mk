@@ -38,7 +38,7 @@ BOARD_KERNEL_CMDLINE     :=	buildvariant=eng
 BOARD_KERNEL_BASE        := 0x10000000
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_KERNEL_PAGESIZE    := 2048
-BOARD_MKBOOTIMG_ARGS     := --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --dt $(LOCAL_PATH)/prebuilt/dtb
+BOARD_MKBOOTIMG_ARGS     := --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --dtb $(LOCAL_PATH)/prebuilt/dtb
 
 # Filesystem
 BOARD_BOOTIMAGE_PARTITION_SIZE     := 33554432
