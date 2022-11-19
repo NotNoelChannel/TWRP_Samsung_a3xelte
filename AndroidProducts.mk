@@ -16,7 +16,6 @@
 
 LOCAL_PATH := device/samsung/a3xelte
 
-PRODUCT_MAKEFILES := \ 
-		$(LOCAL_PATH)/twrp_a3xelte.mk
+PRODUCT_MAKEFILES := $(LOCAL_PATH)/twrp_a3xelte.mk
 
-COMMON_LUNCH_CHOICES := twrp_b0s-eng
+COMMON_LUNCH_CHOICES := twrp_a3xelte-eng
