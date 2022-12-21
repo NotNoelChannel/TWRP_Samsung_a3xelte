@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+TARGET_OTA_ASSERT_DEVICE := a3xelte,a3xeltexx,a3xe3g,a310,a3xelteub,a3xelteob
+
 LOCAL_PATH := device/samsung/a3xelte
 
 # Platform
@@ -55,17 +57,19 @@ RECOVERY_SDCARD_ON_DATA            := true
 TARGET_NO_BOOTLOADER    := true
 TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE    := true
-TW_EXCLUDE_NANO 		  := true
-TW_EXCLUDE_BASH 		  := true
+TW_EXCLUDE_NANO 		:= true
+TW_EXCLUDE_BASH 		:= true
 # Display & Graphics
+TW_MAX_BRIGHTNESS 		         := 255
+TW_DEFAULT_BRIGHTNESS 			 := 162
 TW_THEME                         := portrait_hdpi
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
-TARGET_RECOVERY_PIXEL_FORMAT     := "RGBA_8888"
 TW_BRIGHTNESS_PATH               := "/sys/devices/14800000.dsim/backlight/panel/brightness"
-
+TW_DEVICE_VERSION	:= 0_notnoelchannel
 # TWRP Recovery
 TW_EXCLUDE_SUPERSU          := false
 BOARD_SUPPRESS_SECURE_ERASE := true
+TARGET_RECOVERY_FSTAB := device/samsung/a3xelte/recovery/recovery.fstab
 
 # SHRP Recovery
 SHRP_MAINTAINER := notnoelchannel
