@@ -53,6 +53,12 @@ TARGET_USERIMAGES_USE_EXT4         := true
 TARGET_USERIMAGES_USE_F2FS         := true
 RECOVERY_SDCARD_ON_DATA            := true
 
+# Workaround for error copying vendor files to recovery ramdisk
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+TARGET_COPY_OUT_VENDOR := vendor
+TARGET_COPY_OUT_PRODUCT := product
+BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
+
 # Bootloader
 TARGET_NO_BOOTLOADER    := true
 TW_NO_REBOOT_BOOTLOADER := true
