@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-TARGET_OTA_ASSERT_DEVICE := a3xelte,a3xeltexx,a3xe3g,a310,a3xelteub,a3xelteob
+TARGET_OTA_ASSERT_DEVICE := a3xelte,a3xeltexx
 
 LOCAL_PATH := device/samsung/a3xelte
 
